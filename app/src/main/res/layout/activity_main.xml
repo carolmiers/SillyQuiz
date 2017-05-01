@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.sillyquiz.MainActivity"
+    >
+    <!-- This ScrollView covers all the questions
+    but not the buttons to find the score and the Reset -->
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="64dp"
+    tools:context="com.example.android.sillyquiz.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+    <EditText
+        android:id= "@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:inputType="text"
+        />
+    <TextView
+        android:layout_width ="match_parent"
+        android:layout_height ="wrap_content"
+        android:text ="Welcome to the Silly Music Quiz"
+        android:background="#fce4ec"
+        />
+        <!-- This horizontal layout is to lay out the two CheckBox questions-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <!-- The CheckBoxes are set vertically. Question 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin = "8dp"
+                android:text="1. Which letters when rearranged make the name of a musical instrument?"
+                        />
+            <CheckBox
+                android:id="@+id/coffee_checkbox1a"
+                style="@style/CheckBoxes"
+                android:text="Coffee!"
+            />
+            <CheckBox
+                android:id="@+id/guitar_checkbox1b"
+                style="@style/CheckBoxes"
+                android:text="tagiru!"
+             />
+            <CheckBox
+                android:id="@+id/trombon_checkbox1c"
+                style="@style/CheckBoxes"
+                android:text="bmtnoero!"
+            />
+        </LinearLayout>
+            <!-- The second checkbox is within the horizontal linearlayout weighted
+            to be the same as the first checkbox question -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <!-- Question two is again laid out with vertical checkboxes as in
+                Q1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin = "8dp"
+                android:text="2. Which of the following are not musical instruments? "
+            />
+            <CheckBox
+                android:id="@+id/instrument_checkbox2a"
+                style="@style/CheckBoxes"
+                android:text="Trebuchet"
+            />
+            <CheckBox
+                android:id="@+id/instrument_checkbox2b"
+                style="@style/CheckBoxes"
+                android:text="Didgeridoo"
+                />
+            <CheckBox
+                android:id="@+id/instrument_checkbox2c"
+                style="@style/CheckBoxes"
+                android:text="Elephant" />
+             </LinearLayout>
+        </LinearLayout>
+        <!-- Now the questions are back within the linear layout vertical that captures
+        Q1 and Q2.  Q3 -Q6 are in a RadioGroup. Q7 is an image and text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop = "8dp"
+            android:layout_marginBottom="8dp"
+            android:text="3. Which of these instruments is not made of metal?"
+            />
+        <!-- This one is done the old way not the way done in the tutorial I copied
+           Q3 -->
+        <RadioGroup
+            android:id="@+id/secondradiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/violin"
+            android:onClick="Choose one">
+         <RadioButton
+            android:id="@+id/radionotmetal_button3a"
+            style="@style/RadioButton"
+            android:text="Oboe"
+               />
+        <RadioButton
+            android:id="@+id/radionotmetal_button3b"
+            style="@style/RadioButton"
+            android:text="Cymbals"
+            />
+        <RadioButton
+            android:id="@+id/radionotmetal_button3c"
+            style="@style/RadioButton"
+            android:text="French horn"
+             />
+    </RadioGroup>
+        <!-- This one is the copied one up until after the button that is just
+        below the end of the RadioGroup layout Q4-->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.android.radiogroupexample.MainActivity">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/text"
+                android:text="@string/ChoiceText" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:id="@+id/myRadioGroup"
+                android:background="#abf234"
+                android:checkedButton="@+id/sound" >
+            <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/wood"
+                 android:text="@string/WoodenInstrument" />
+            <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/brass"
+                 android:text="@string/BrassInstrument" />
+            <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/string"
+                 android:text="@string/StringInstrument" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+
+           <Button
+               android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myRadioGroup"
+            android:layout_marginTop="10dp"
+            android:id="@+id/chooseBtn"
+            android:text="@string/ChooseBtn"
+        />
+        <!-- This is back to the first way of trying to do RadioButtons
+        that doesn't work 27th April using Android:checked = "true"
+        Q5. Still within the linear vertical layout and the ScrollView-->
+             <RadioGroup
+                android:id="@+id/firstradiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "8dp"
+                android:text="4. Which one describes a tenor singing voice?"
+                />
+             <RadioButton
+                android:id="@+id/radiotenor_4a"
+                style="@style/RadioButton"
+                android:text="a low male voice"
+                />
+             <RadioButton
+                android:id="@+id/radiotenor_box4b"
+                style="@style/RadioButton"
+                android:text="a high male voice"
+                        />
+             <RadioButton
+                android:id="@+id/radiotenor_box4c"
+                style="@style/RadioButton"
+                android:text="a high female voice"
+                       />
+             </RadioGroup>
+<!-- This is Q6, also a RadioButton taking into account the added in one.
+Still within the Linear Layout vertical-->
+             <RadioGroup
+                android:id="@+id/thirdradiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              >
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "8dp"
+                android:text="5. Which instrument is known for blowing a lot of hot air?"
+             />
+
+             <RadioButton
+                android:id="@+id/radiohotair_box5a"
+                style="@style/RadioButton"
+                android:text="a harpsichord"
+
+             />
+            <RadioButton
+                android:id="@+id/radiohotair_box5b"
+                style="@style/RadioButton"
+                android:text="a violin"
+                 />
+            <RadioButton
+                android:id="@+id/radiohotair_box5c"
+                style="@style/RadioButton"
+                android:text="a Trump - et!"
+                />
+            </RadioGroup>
+<!-- This is Q7 like the Cookies app grab a different image and text. Still
+ within the Linear Layout vertical and the ScrollView-->
+        <ImageView
+            android:id="@+id/android_lion_image_view"
+            android:layout_width="240dp"
+            android:layout_height="150dp"
+            android:layout_margin="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/lionroaring"
+            />
+        <TextView
+            android:id="@+id/status_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="What is the loudest animal?"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+              />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Press Me."
+            android:onClick="PressMe"/>
+<!-- End of LinearLayout vertical. But still within the ScrollView-->
+    </LinearLayout>
+    </ScrollView>
+    <!-- Now outside the ScrollView but within the Relative Layout in order
+    to place the Score or Reset Buttons beneath the Questions using Align, Below
+    etc . -->
+    <Button
+        android:id="@+id/score_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="scoreResult"
+        android:layout_centerHorizontal="true"
+        android:text="Score"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="resetGameChoice"
+        android:text="Reset"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+                />
+    <TextView
+        android:layout_above="@id/reset_button"
+        android:id="@+id/score_display_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="56dp"
+        android:text="0"
+        android:layout_toRightOf="@id/score_button"
+        android:textSize="42sp" />
+    </RelativeLayout>

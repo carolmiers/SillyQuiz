@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SillyQuiz</string>
+    <string name="ChoiceText">Select the right answer</string>
+    <string name="WoodenInstrument">Clarinet</string>
+    <string name="BrassInstrument">Trumpet</string>
+    <string name="StringInstrument">Violin</string>
+    <string name="ChooseBtn">Choose</string>
+</resources>
