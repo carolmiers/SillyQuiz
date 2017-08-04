@@ -1,8 +1,62 @@
 <resources>
     <string name="app_name">SillyQuiz</string>
-    <string name="ChoiceText">Select the right answer</string>
+
     <string name="WoodenInstrument">Clarinet</string>
     <string name="BrassInstrument">Trumpet</string>
     <string name="StringInstrument">Violin</string>
-    <string name="ChooseBtn">Choose</string>
+
+
+    <string name="Button_text_Oboe">Oboe</string>
+    <string name="Button_text_Cymbals">Cymbals</string>
+    <string name="Button_text_French_horn">French Horn</string>
+
+
+    <string name="title">Welcome to the Silly Quiz</string>
+    <string name="Edit_text_hint">Enter name</string>
+
+
+    <string name="CheckBox_text_q1">1. Which letters when rearranged make the name of a musical instrument?</string>
+    <string name="CheckBox_Ans_q1a">Coffee!</string>
+    <string name="CheckBox_Ans_q1b">tagiru!</string>
+    <string name="CheckBox_Ans_q1c">bmtnoero!</string>
+
+
+    <string name="CheckBox_text_q2">2. Which of the following are not the name of a recognised musical instrument?   </string>
+    <string name="CheckBox_text_q2_large">2. Which of the following are not the name of a musical instrument?</string>
+    <string name="CheckBox_text_q2_normal">2.  Which of the following are not the names of a known musical instrument?</string>
+    <string name="CheckBox_Ans_q2a">Trebuchet</string>
+    <string name="CheckBox_Ans_q2b">Thevenin!</string>
+    <string name="CheckBox_Ans_q2c">Elephant!</string>
+
+    <string name="RadioButton_text_q3">3. Which of these musical instruments is not made from metal ? </string>
+    <string name="RadioButton_Ans_q3a">Oboe</string>
+    <string name="RadioButton_Ans_q3b">Cymbals!</string>
+    <string name="RadioButton_Ans_q3c">French Horn</string>
+
+    <string name="onclick">onClick</string>
+    <string name="image_click">What is the loudest animal?</string>
+    <string name="ChoiceText">4. Which one is never made from wood. \n Select the right answer</string>
+    <string name="RadioGroup_text_q4">4. Which one is not made from wood?"</string>
+    <string name="RadioButton_Ansq4a">Oboe</string>
+    <string name="RadioButton_Ansq4b">Cymbals</string>
+    <string name="RadioButton_Ansq4c">French Horn</string>
+
+    <string name="RadioGroup_text_q5">5. Which one describes a tenor singing voice?"</string>
+    <string name="RadioButton_Ansq5a">a low male voice</string>
+    <string name="RadioButton_Ansq5b">a high male voice</string>
+    <string name="RadioButton_Ansq5c">a high female voice</string>
+
+    <string name="RadioButton_text_q6">6.Which of these is known for blowing hot air?!"</string>
+    <string name="RadioButton_Ansq6a">A harpsichord</string>
+    <string name="RadioButton_Ansq6b">A violin</string>
+    <string name="RadioButton_Ansq6c">A trump - et!</string>
+
+    <string name="entryquestion">7.How many strings does a ukulele usually have?</string>
+
+    <string name="RadioGroup_click_right_answ">Select the right answer</string>
+    <string name="Image_text">Press Me</string>
+    <string name="Score_result">Score</string>
+    <string name="Reset">Reset</string>
+
+
 </resources>
